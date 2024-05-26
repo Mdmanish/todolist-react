@@ -1,0 +1,54 @@
+body {
+    background-color: #faf9f8;
+}
+
+.AddATaskContainer {
+    margin: 2rem;
+    margin-bottom: 1rem;
+}
+
+.AddATask {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    input {
+        padding: 1rem;
+    }
+}
+
+.AddATask .checkbox {
+    margin-left: 1rem;
+}
+
+.AddATask .InputText {
+    background-color: #fff;
+    border: none;
+    width: 90%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.AddATask .InputText:focus {
+    outline: none;
+}
+
+.AddATaskButtom {
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    // box-shadow: 0 0 3px #888;
+    border: 1px solid #ccc;
+}
+
+.AddATaskButtom img {
+    margin: auto;
+    height: 20px;
+    width: 20px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.AddATaskButtom button {
+    padding: 5px 10px;
+}

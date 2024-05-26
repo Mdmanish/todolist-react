@@ -1,0 +1,42 @@
+.subHeaderContainer {
+    margin: 2rem;
+}
+
+.subHeader {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.subHeaderLeft, .subHeaderRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 1.5rem;
+    }
+}
+
+.subHeaderLeft h3, .subHeaderLeft p {
+    margin: 0;
+    padding: 0;
+}
+
+.subHeaderRight p {
+    margin: 0;
+    padding: 0;
+    margin-right: 1.5rem;
+    font-weight: 400;
+}
+
+.SubHeaderDate {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 400;
+}

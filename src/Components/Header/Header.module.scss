@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: cneter;
+    padding: 7px;
+    background-color: #2564cf;
+    color: #fff;
+}
+
+.header .left {
+    margin-left: 2rem;
+    h1 {
+        margin: 0;
+        margin-top: 6px;
+        font-size: 16px;
+    }
+}
+
+.header .middle input {
+    width: 200%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.header .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 1.5rem;
+    }
+}
