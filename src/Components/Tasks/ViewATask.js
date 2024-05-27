@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Style from "./ViewATask.module.scss"
 
 const ViewATask = (props) => {
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(props?.data?.completed);
 
     return (
-        <div className={Style.ViewATask}>
+        <div className={Style.ViewATask} onClick={() => props?.TaskClickedHandler()}>
             <div className={Style.main}>
                 <input
                     type="checkbox"

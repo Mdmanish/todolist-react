@@ -1,0 +1,14 @@
+body {
+    // background-color: #fff;
+    // padding: 2rem !important;
+}
+
+.ToDoListContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "list" "detailedView";
+
+    .showDetailedView {
+        grid-area: list;
+    }
+}
