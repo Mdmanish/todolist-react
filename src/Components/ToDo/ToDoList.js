@@ -11,6 +11,12 @@ const ToDoList = () => {
     const [data, setData] = useState({})
     const [showDetailedView, setShowDetailedView] = useState(false)
     const [taskeDetailedData, setTaskDetailedData] = useState([])
+    const [isNewTaskAdded, setIsNewTaskAdded] = useState(false)
+
+    const AddATaskHandler = () => {
+        console.log('AddATaskHandler')
+        setIsNewTaskAdded(true)
+    }
 
     const TaskClickedHandler = (item) => {
         setShowDetailedView(true)
@@ -31,7 +37,7 @@ const ToDoList = () => {
         .catch((error) => {
             console.log('error: ', error)
         })
-    }, [])
+    }, [isNewTaskAdded])
 
     return (
         <>
@@ -39,7 +45,7 @@ const ToDoList = () => {
             <div className={showDetailedView ? Style.ToDoListContainer : ''}>
                 <div className={showDetailedView ? Style.showDetailedView : ''}>
                     <SubHeader />
-                    <AddATask />
+                    <AddATask AddATaskHandler={AddATaskHandler} />
                     {
                         Array.isArray(data) && data.map((item, index) => (
                             <ViewATask 

@@ -5,16 +5,17 @@ import notificationIcon from "../../assets/notification-icon.png"
 import repeatIcon from "../../assets/repeat-icon.png"
 import axios from "axios";
 
-const AddATask = () => {
+const AddATask = (props) => {
     const [checkbox, setCheckbox] = useState(false);
     const [isAddTaskClicked, setIsAddTaskClicked] = useState(false);
     const [task, setTask] = useState('');
-    const [formData, setFormData] = useState({
+    const [initialFormData, setInitialFormData] = useState({
         title: '',
         // duedate: '',
         // remind: '',
         // repeat: '',
     })
+    const [formData, setFormData] = useState(initialFormData)
 
     const SubmitHandler = () => {
         // const formData = formData
@@ -25,6 +26,8 @@ const AddATask = () => {
         })
         .then((response) => {
             console.log(response)
+            setFormData(initialFormData)
+            props.AddATaskHandler()
         })
         .catch((error) => {
             console.log(error)
